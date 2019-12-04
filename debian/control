@@ -1,0 +1,51 @@
+Source: imx-codec
+Priority: extra
+Maintainer: Josua Mayer <josua@solid-run.com>
+Build-Depends:
+ debhelper (>= 9),
+ dh-autoreconf,
+Standards-Version: 3.9.3
+Section: libs
+Vcs-Git: https://github.com/SolidRun/pkg-imx-codec.git
+Vcs-Browser: https://github.com/SolidRun/pkg-imx-codec
+
+Package: imx-codec
+Section: libs
+Multi-Arch: same
+Architecture: armel armhf arm64
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: NXP accelerated Codecs for i.MX
+ Provides accelerated libraries to handle multimedia codecs supported by i.MX SoCs.
+
+Package: imx-codec-dev
+Section: libdevel
+Multi-Arch: foreign
+Architecture: all
+Depends:
+ ${misc:Depends},
+ imx-codec (= ${binary:Version}),
+Description: Development files for imx-codec
+ Provides development libraries and headers for using imx-codec.
+
+Package: imx-codec-doc
+Section: libs
+Multi-Arch: foreign
+Architecture: all
+Depends:
+ ${misc:Depends},
+ imx-codec (= ${binary:Version}),
+Description: Documentation for imx-codec
+ Provides datasheets and release notes for imx-codec.
+
+Package: imx-codec-examples
+Section: libs
+Multi-Arch: same
+Architecture: armel armhf arm64
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ imx-codec (= ${binary:Version}),
+Description: Examples for imx-codec
+ Provides example code for using imx-codec.
