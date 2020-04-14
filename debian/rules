@@ -14,8 +14,8 @@ ifeq (armhf,$(DEB_HOST_ARCH))
 	CONFIG_OPTS += --enable-fhw
 endif
 
-NAME=imx-codec-4.4.5
-MD5=e17258161c84530097f6f9d5d46e6c26
+NAME=imx-codec-4.5.4
+MD5=35d16ca40f876845bdd82184f467c276
 
 %:
 	dh $@ --sourcedirectory=$(NAME) --parallel --with autoreconf
